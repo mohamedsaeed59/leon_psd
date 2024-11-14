@@ -1,5 +1,6 @@
 :root{
     --main-color: #10cab7;
+    --secondary-color: #2c4755;
 }
 
 *{
@@ -28,7 +29,28 @@ body{
         width: 1170px;
     }
 }
-
+.special-heading{
+    color: #ebeced;
+    font-size: 100px;
+    font-weight: 800;
+    text-align: center;
+    margin: 0;
+    letter-spacing: -3px;
+}
+.special-heading + p{
+    margin: -30px 0 0;
+    text-align: center;
+    font-size: 20px;
+    color: #797979;
+}
+@media(max-width: 767px){
+    .special-heading{
+        font-size: 80px;
+    }
+    .special-heading + p{
+        margin: -20px 0 0;
+    }
+}
 /* Header component */
 .header{
     padding: 20px;
@@ -162,4 +184,62 @@ body{
     color: #8e8d8d;
     line-height: 1.8;
     font-size: 17px;
+}
+
+/* services component */
+.services{
+    padding: 60px 0;
+}
+.services .services-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 100px;
+}
+.services .services-content .srv{
+    display: flex;
+    margin-bottom: 40px;    
+}
+@media(max-width: 767px){
+    .services .services-content .srv{
+        flex-direction: column;   
+        text-align: center;
+    }
+}
+.services .services-content .srv i{
+    color: var(--main-color);
+    flex-basis: 60px;
+}
+.services .services-content .srv .text{
+    flex: 1;
+}
+.services .services-content .srv h3{
+    margin: 0 0 20px;
+}
+.services .services-content .srv p{
+    color: #444;
+    font-weight: 300;
+    line-height: 1.6;
+}
+.services .services-content .image{
+    position: relative;
+    text-align: center;
+}
+.services .services-content .image::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -50px;
+    background-color: var(--secondary-color);
+    width: 100px;
+    height: calc(100% + 100px);
+    z-index: -1;
+}
+.services .services-content .image img{
+    width: 260px;
+}
+@media(max-width: 1199px) {
+    .services .services-content .image{
+        display: none;
+    }
 }
