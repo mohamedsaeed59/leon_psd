@@ -9,6 +9,9 @@
 body{
     font-family: "Roboto", serif;
 }
+html{
+    scroll-behavior: smooth;
+}
 .container{
     padding: 0 15px;
     margin-left: auto;
@@ -344,4 +347,57 @@ body{
 .about .about-content .text p:last-of-type{
     line-height: 2;
     color: #777;
+}
+
+/* contact component */
+.contact{
+    padding: 60px 0;
+    background-color: #f6f6f6;
+}
+.contact .info{
+    padding: 60px 0;
+    text-align: center;
+}
+.contact .label{
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--secondary-color);
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+}
+.contact .link{
+    display: block;
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--main-color);
+    text-decoration: none;
+}
+.contact .social{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 16px;
+} 
+.contact .social i{
+    margin-left: 10px;
+    color: var(--secondary-color);
+}
+@media(max-width: 767px){
+    .contact .label,
+    .contact .link{
+        font-size: 20px;
+    }
+}
+
+/* footer component */
+.footer{
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 30px 10px;
+}
+.footer span{
+    font-weight: bold;
+    color: var(--main-color);
 }
